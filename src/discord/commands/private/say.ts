@@ -1,6 +1,5 @@
-import { Command, Component } from "@/discord/base";
-import { createRow } from "@/discord/functions";
-import { ApplicationCommandOptionType, ApplicationCommandType, ChannelSelectMenuBuilder, RoleSelectMenuBuilder, StringSelectMenuBuilder, UserSelectMenuBuilder } from "discord.js";
+import { Command } from "@/discord/base";
+import { ApplicationCommandOptionType, ApplicationCommandType } from "discord.js";
 
 export default new Command({
     name: "say",
