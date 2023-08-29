@@ -18,7 +18,7 @@ export default new Command({
         {
             name: "autor",
             description: "Limpar mensagens de apenas um autor",
-            type: ApplicationCommandOptionType.String,
+            type: ApplicationCommandOptionType.User,
         },
         {
             name: "mensagem",
