@@ -1,7 +1,6 @@
 import { Command } from "@/discord/base";
-import { createRow } from "@/discord/functions";
-import { brBuilder, hexToRgb } from "@/functions";
 import { settings } from "@/settings";
+import { hexToRgb, brBuilder, createRow } from "@magicyan/discord";
 import { ApplicationCommandType, ButtonBuilder, ButtonStyle, EmbedBuilder, escapeMarkdown, formatEmoji, hyperlink } from "discord.js";
 
 
@@ -10,7 +9,7 @@ export default new Command({
     description: "pages",
     dmPermission: false,
     type: ApplicationCommandType.ChatInput,
-    async run({ interaction }){
+    async run(interaction){
 
         interaction.reply({
             embeds: [new EmbedBuilder({

@@ -14,7 +14,7 @@ export default new Command({
             required: true,
         }
     ],
-    async run({ interaction }){
+    async run(interaction){
         const { options, channel } = interaction;
         await interaction.deferReply({ ephemeral: true });
         

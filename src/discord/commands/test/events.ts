@@ -34,8 +34,8 @@ export default new Command({
             ]
         }
     ],
-    async run({ interaction, client }){
-        const { options } = interaction;
+    async run(interaction){
+        const { options, client } = interaction;
 
         const selectedEvent = options.getSubcommand(true);
 

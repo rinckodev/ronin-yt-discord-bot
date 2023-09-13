@@ -1,13 +1,13 @@
 import { Event } from "@/discord/base";
-import { brBuilder, hexToRgb } from "@/functions";
 import { settings } from "@/settings";
+import { hexToRgb, brBuilder } from "@magicyan/discord";
 import { EmbedBuilder, TextChannel, time } from "discord.js";
 
 const channelId = "1148466995872931860";
 
-export default new Event({
+new Event({
     name: "guildMemberRemove",
-    run(client, member) {
+    run(member) {
         
         const channel = member.guild.channels.cache.get(channelId) as TextChannel;
         const memberAvatarUrl = member.displayAvatarURL({ size: 512 });

@@ -3,9 +3,9 @@ import { time } from "discord.js";
 
 const logsChannelId = "1141944937361977438";
 
-export default new Event({
+new Event({
     name: "interactionCreate",
-    async run(client, interaction) {
+    async run(interaction) {
         if (!interaction.inCachedGuild()) return;
 
         if (interaction.isCommand()){

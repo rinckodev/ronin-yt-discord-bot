@@ -1,14 +1,14 @@
-import { Command } from "@/discord/base";
-import { hexToRgb, sleep } from "@/functions";
+import { Command, Component } from "@/discord/base";
 import { settings } from "@/settings";
+import { hexToRgb, sleep } from "@magicyan/discord";
 import { ApplicationCommandType, EmbedBuilder, formatEmoji } from "discord.js";
 
-export default new Command({
+new Command({
     name: "refresh",
     description: "refresh",
     dmPermission: false,
     type: ApplicationCommandType.ChatInput,
-    async run({ interaction }){
+    async run(interaction){
         
         const refreshEmoji = formatEmoji(settings.emojis.animated.refresh, true);
 
@@ -29,6 +29,5 @@ export default new Command({
                 description: `${successEmoji} Dados atualizados com sucesso!`
             })],
         });
-
     }
 });

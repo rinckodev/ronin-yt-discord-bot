@@ -1,14 +1,14 @@
 import { Command } from "@/discord/base";
-import { brBuilder, hexToRgb } from "@/functions";
 import { settings } from "@/settings";
+import { brBuilder } from "@magicyan/discord";
 import { ApplicationCommandType, EmbedBuilder, formatEmoji, hyperlink } from "discord.js";
 
-export default new Command({
+new Command({
     name: "notificação",
     description: "notificação",
     dmPermission: false,
     type: ApplicationCommandType.ChatInput,
-    async run({ interaction }){
+    async run(interaction){
 
         const content = brBuilder(
             `# ${formatEmoji(settings.emojis.animated.bell, true)} Novo vídeo do canal Rincko Dev!`,
@@ -16,7 +16,5 @@ export default new Command({
         );
 
         interaction.reply({ content });
-
-
     }
 });

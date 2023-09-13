@@ -1,14 +1,14 @@
 import { Command } from "@/discord/base";
 import { ApplicationCommandType } from "discord.js";
 
-export default new Command({
+new Command({
     name: "uppercase",
-    dmPermission: false,
+    dmPermission,
     type: ApplicationCommandType.Message,
-    async run({ interaction }){
+    async run(interaction){
         const { targetMessage } = interaction;
         
-        interaction.reply({ ephemeral: true, 
+        interaction.reply({ ephemeral,
             content: targetMessage.content.toUpperCase()
         });
     }

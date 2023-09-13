@@ -1,5 +1,5 @@
 import { Command } from "@/discord/base";
-import { brBuilder } from "@/functions";
+import { brBuilder } from "@magicyan/discord";
 import { ApplicationCommandOptionType, ApplicationCommandType, codeBlock, roleMention } from "discord.js";
 
 const moderationRoleId = "1144589177124573185";
@@ -27,7 +27,7 @@ export default new Command({
             autocomplete: true,
         }
     ],
-    async autoComplete({ interaction }) {
+    async autoComplete(interaction) {
         const { options, channel } = interaction;
         const focused = options.getFocused(true);
 
@@ -50,7 +50,7 @@ export default new Command({
             }
         }
     },
-    async run({ interaction }){
+    async run(interaction){
         const { member, options, channel } = interaction;
 
         await interaction.deferReply({ ephemeral: true });

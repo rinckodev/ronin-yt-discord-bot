@@ -1,7 +1,6 @@
 import { Command } from "@/discord/base";
-import { createRow } from "@/discord/functions";
-import { brBuilder, hexToRgb } from "@/functions";
 import { settings } from "@/settings";
+import { brBuilder, hexToRgb, createRow } from "@magicyan/discord";
 import { ActionRowBuilder, ApplicationCommandOptionType, ApplicationCommandType, ButtonBuilder, ButtonStyle, ColorResolvable, ComponentType, EmbedBuilder, codeBlock } from "discord.js";
 
 export default new Command({
@@ -31,7 +30,7 @@ export default new Command({
             type: ApplicationCommandOptionType.User,
         }
     ],
-    async run({ interaction }){
+    async run(interaction){
         const { options, channel } = interaction;
 
         await interaction.deferReply({ ephemeral: true, fetchReply: true });

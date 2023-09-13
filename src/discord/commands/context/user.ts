@@ -1,13 +1,13 @@
 import { Command } from "@/discord/base";
-import { hexToRgb } from "@/functions";
 import { settings } from "@/settings";
+import { hexToRgb } from "@magicyan/discord";
 import { ApplicationCommandType, EmbedBuilder } from "discord.js";
 
-export default new Command({
+new Command({
     name: "avatar",
     dmPermission: false,
     type: ApplicationCommandType.User,
-    async run({ interaction }){
+    async run(interaction){
         const { targetMember } = interaction;
         
         interaction.reply({ ephemeral: true, 

@@ -1,6 +1,6 @@
 import { Command } from "@/discord/base";
-import { hexToRgb } from "@/functions";
 import { settings } from "@/settings";
+import { hexToRgb } from "@magicyan/discord";
 import { ApplicationCommandType, EmbedBuilder, TextChannel } from "discord.js";
 
 export default new Command({
@@ -8,7 +8,8 @@ export default new Command({
     description: "novo post",
     dmPermission: false,
     type: ApplicationCommandType.ChatInput,
-    async run({ interaction, client }){
+    async run(interaction){
+        const { client } = interaction;
         const channel = interaction.channel as TextChannel;
 
         interaction.deferReply({ ephemeral: true });
