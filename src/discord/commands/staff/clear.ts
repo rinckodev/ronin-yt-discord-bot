@@ -1,4 +1,4 @@
-import { Command } from "@/discord/base";
+import { Command } from "@discord/base";
 import { brBuilder } from "@magicyan/discord";
 import { ApplicationCommandOptionType, ApplicationCommandType, codeBlock, roleMention } from "discord.js";
 
